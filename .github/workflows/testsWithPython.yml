@@ -31,8 +31,9 @@ jobs:
         uses: SonarSource/sonarcloud-github-action@master
         env:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
-        run: |
-          sonar-scanner \
+        with:
+          args:
+            -Dsonar.organization=camilo959
             -Dsonar.projectKey=calculator-app
             -Dsonar.projectName=calculator-app
             -Dsonar.python.coverage.reportPaths=coverage.xml
