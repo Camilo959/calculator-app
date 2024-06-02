@@ -23,3 +23,11 @@ jobs:
 
       - name: Ejecutar pruebas
         run: pytest
+
+      - name: Run tox
+        run: tox -e py
+
+      - name: SonarCloud Scan
+        uses: SonarSource/sonarcloud-github-action@master
+        env:
+          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
