@@ -35,6 +35,5 @@ jobs:
         with:
           args:
             -Dsonar.organization=camilo959
-            -Dsonar.projectKey=calculator-app
-            -Dsonar.projectName=calculator-app
+            -Dsonar.projectKey=Camilo959_calculator-app
             -Dsonar.python.coverage.reportPaths=coverage.xml
