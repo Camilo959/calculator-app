@@ -1,10 +1,6 @@
 name: Pruebas de Python
 
 on:
-  push:
-    branches:
-      - 'main'
-
   pull_request:
     branches:
       - 'main'

@@ -1,3 +1,4 @@
+import pytest
 from src.main import sumar, restar, multiplicar
 
 def test_sumar():
@@ -11,3 +12,14 @@ def test_restar():
 def test_multiplicar():
     resultado = multiplicar(5, 5)
     assert resultado ==  25
+
+@pytest.mark.parametrize(
+    "input_x, input_y, expected",
+    [
+        (5, 5, 10),
+        (10, 10, 20),
+        (15, 15, 30)
+    ]
+)
+def test_sumar_parametros(input_x, input_y, expected):
+    assert sumar(input_x, input_y) == expected
